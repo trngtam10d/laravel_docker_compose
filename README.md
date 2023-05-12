@@ -40,6 +40,7 @@ http://localhost
 2. Execute the following command
 
 ```bash
+$ sudo apt install make
 $ make install
 ```
 
