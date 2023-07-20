@@ -168,6 +168,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * Setup Modules.
+        */
+        App\Modules\ServiceProvider::class,
     ])->toArray(),
 
     /*
