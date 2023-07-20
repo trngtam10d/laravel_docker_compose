@@ -35,7 +35,7 @@ $ docker compose exec app php artisan migrate
 http://localhost
 
 ### Laravel setup
-
+https://blog.desdelinux.net/vi/Makefile-l%C3%A0-g%C3%AC-v%C3%A0-n%C3%B3-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-nh%C6%B0-th%E1%BA%BF-n%C3%A0o-trong-linux/
 1. Git clone & change directory
 2. Execute the following command
 
