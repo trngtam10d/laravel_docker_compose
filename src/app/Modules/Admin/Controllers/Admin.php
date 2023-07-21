@@ -8,13 +8,15 @@
 */
 namespace App\Modules\Admin\Controllers;
 
+use App\Http\Controllers\Controller;
+
 class Admin extends Controller {
 
     /**
      * View Dashboard
-     * @return void
+     * @return void|string
      */
     public function index() {
-        return "view";
+        return view("Admin::admin.index");
     }
 }

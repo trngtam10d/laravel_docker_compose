@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         DB::table('la_admin')->insert([
             'email' => 'admin@gmail.com',
             'password' => Hash::make('password'),
-            'staff_name' => 'Admin'
+            'staff_name' => 'Admin',
+            'is_delete' => 0
         ]);
     }
 }

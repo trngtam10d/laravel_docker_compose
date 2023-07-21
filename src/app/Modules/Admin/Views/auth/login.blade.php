@@ -23,7 +23,7 @@
         <div class="card mx-auto col-lg-6 col-md-8 mt-md-3">
             <div class="card-body pt-5">
                 <div class="mb-3 text-center">
-                    <img src="{{ asset('assets/admin/img/logo.png') }}" class="w-50 mx-auto">
+                    <img src="{{ asset('assets/admin/img/logo.png') }}" class="mx-auto">
                 </div>
                 @if ($errors->any())
                     <div class="alert alert-danger" role="alert">
@@ -34,7 +34,7 @@
                         </ul>
                     </div>
                 @endif
-                <form action="/admin/login/auth" method="post" id="login_form">
+                <form action="{{ route('admin.login_request') }}" method="post" id="login_form">
                     @csrf
                     <div class="form-group">
                         <input type="text" name="email" id="email" class="form-control form-control-lg" placeholder="Email" />
@@ -43,7 +43,7 @@
                         <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Password" />
                         <span style="position:absolute;top:50%;right: 10px;transform: translateY(-50%);cursor: pointer" class="toggle-pass fa fa-eye-slash"></span>
                     </div>
-                    <button class="btn btn-primary btn-block btn-lg" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    <button class="btn btn-warning btn-block btn-lg" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
                 </form>
             </div>
         </div>

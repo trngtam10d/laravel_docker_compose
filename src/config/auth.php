@@ -42,11 +42,11 @@ return [
         ],
         'admin' => [
             'driver' => 'session',
-            'provider' => 'admins',
+            'provider' => 'la_admin',
         ],
         'api' => [
             'driver' => 'passport',
-            'provider' => 'admins',
+            'provider' => 'la_admin',
         ],
     ],
 
@@ -72,7 +72,7 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'admins' => [
+        'la_admin' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
@@ -109,8 +109,8 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        'admins' => [
-            'provider' => 'admins',
+        'la_admin' => [
+            'provider' => 'la_admin',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

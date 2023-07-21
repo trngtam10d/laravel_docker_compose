@@ -18,7 +18,7 @@ class AdminAuthenticate
     {
         // Kiểm tra session 2fa_verified
         // Thực hiện redirect tới màn hình nhập Authentication code
-        if (Auth::check() == null) {
+        if (Auth::guard('admin') == null) {
             return redirect()->route('admin.login');
         }
 
