@@ -1,0 +1,501 @@
+@charset "UTF-8";
+/* CSS BASE Document */
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-size: 12px;
+    line-height: 150%;
+}
+
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+img, img a {
+    border: 0;
+}
+
+img {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+fieldset, img {
+    border: 0;
+}
+/*
+ul, ol, li {
+    list-style: none;
+}
+*/
+table {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address, caption, cite, code, dfn, em, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+caption, th {
+    text-align: left;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+select {
+    width: auto;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.wbBA {
+    word-break: break-all;
+}
+
+.vaM {
+    vertical-align: middle !important;
+}
+
+.fL {
+    float: left;
+}
+
+.fR {
+    float: right;
+}
+
+.taL {
+    text-align: left;
+}
+
+.taR {
+    text-align: right;
+}
+
+.taC {
+    text-align: center;
+}
+
+.fwB {
+    font-weight: bold;
+}
+
+.fwN {
+    font-weight: normal;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.w25 {
+    width: 25px !important;
+}
+
+.w50 {
+    width: 50px !important;
+}
+
+.w65 {
+    width: 65px !important;
+}
+
+.w80 {
+    width: 80px !important;
+}
+
+.w85 {
+    width: 85px !important;
+}
+
+.w100 {
+    width: 100px !important;
+}
+
+.w150 {
+    width: 150px !important;
+}
+
+.w200 {
+    width: 200px !important;
+}
+
+.w300 {
+    width: 300px !important;
+}
+
+.w500 {
+    width: 500px !important;
+}
+.maxw100 {
+    max-width: 100px;
+}
+.maxw200 {
+    max-width: 200px;
+}
+.minw50 {
+    min-width: 50px;
+}
+.minw60 {
+    min-width: 60px;
+}
+.minw85 {
+    min-width: 85px;
+}
+.minw100 {
+    min-width: 100px;
+}
+.minw200 {
+    min-width: 200px;
+}
+.minw300 {
+    min-width: 300px;
+}
+.w-20 {
+    width: 20%;
+}
+.w-80 {
+    width: 80%;
+}
+
+.wAll {
+    width: 95% !important;
+}
+
+.h32 {
+    height: 32px !important;
+}
+
+.nomb {
+    margin-bottom: 0;
+}
+
+.fcB {
+    color: #007ce6;
+}
+
+.fcR {
+    color: #dd0000;
+}
+
+.fcG {
+    color: #666;
+}
+
+.fcGr {
+    color: #060;
+}
+
+.fwB {
+    font-weight: bold;
+}
+
+.fwN {
+    font-weight: normal;
+}
+
+.fs10 {
+    font-size: 10px;
+}
+
+.fs12 {
+    font-size: 12px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fsrem0875 {
+    font-size: 0.875rem !important;
+}
+
+.bt {
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
+}
+.bb {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+tr.clickable td, div.clickable {
+    cursor: pointer;
+}
+
+.app-header.navbar, .app-header.navbar .navbar-brand {
+    height: 42px;
+}
+
+.header-fixed .app-body {
+    margin-top: 42px;
+}
+
+.sidebar-fixed .sidebar {
+    height: calc(100vh - 42px);
+}
+
+.reservation-tab-pane {
+    padding: 10px !important;
+}
+
+@media (min-width: 992px) {
+    .brand-minimized .app-header.navbar .navbar-brand {
+        width: 140px;
+        background-color: #fff;
+        background-image: url(../../img/admin/logo.png);
+        background-size: 130px;
+        background-position: center 45%;
+        border-bottom: 1px solid #c2cfd6;
+    }
+}
+
+.app-header.navbar .navbar-brand {
+    display: inline-block;
+    width: 155px;
+    padding: .5rem 1rem;
+    margin-right: 0;
+    background-image: url(../../img/admin/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 120px auto;
+}
+
+/* Chrome, Safari */
+.form-control::-webkit-input-placeholder {
+    color: #bbbbbb;
+}
+
+/* Firefox */
+.form-control::-moz-placeholder {
+    color: #bbbbbb;
+}
+
+/* Firefox 18以前 */
+.form-control:-moz-placeholder {
+    color: #bbbbbb;
+}
+
+/* IE */
+.form-control:-ms-input-placeholder {
+    color: #bbbbbb;
+}
+
+.dashed-line {
+    border-top: 1px dashed #c1cace;
+}
+
+.searh-form .control-label {
+    color: #3a9d5d !important;
+}
+
+.badge {
+    font-size: 95%;
+    font-weight: normal;
+}
+
+.page-card-header {
+    font-size: 16px !important;
+    padding: .6rem 1.25rem !important;
+
+}
+
+.bg-light-gray {
+    background-color: rgba(0, 0, 0, .05) !important;
+}
+
+.reservation-detail .card-header {
+    height: 40px !important;
+}
+
+.reservation-detail .card-header .btn {
+    margin-top: -0.45rem !important;
+}
+
+.opacity-1 {
+    opacity: 1 !important;
+}
+
+.reservation-detail {
+    font-size: 13px;
+}
+
+.reservation-detail .tab-content {
+    border: 3px solid #20a8d8 !important;
+}
+
+.reservation-detail .nav-tabs {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-bottom: 3px solid #20a8d8 !important;
+}
+
+.reservation-detail .nav-tabs .nav-item {
+    margin-bottom: -4px;
+}
+
+.reservation-detail .nav-tabs .nav-link.active, .reservation-detail .nav-tabs .navbar .active.dropdown-toggle, .reservation-detail .navbar .nav-tabs .active.dropdown-toggle {
+    color: #29363d;
+    background: #fff;
+    border-color: #20a8d8 #20a8d8 #fff;
+}
+
+.reservation-detail .nav-tabs .nav-link, .reservation-detail .nav-tabs .navbar .dropdown-toggle, .reservation-detail .navbar .nav-tabs .dropdown-toggle {
+    border: 3px solid transparent;
+}
+
+.reservation-detail .tab-content {
+    margin-top: -3px;
+    background: #fff;
+    border: 1px solid #20a8d8;
+}
+
+.bg-alert-danger {
+    background-color: #fee2e1;
+    border-color: #fdd6d6;
+}
+
+.border-alert {
+    border: 1px solid #fdd6d6;
+}
+
+.border-plan-copy {
+    border: 3px solid #4dbd74;
+}
+
+.table-padding-5 tr td {
+    padding: 5px !important;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.email-app nav {
+    flex: 0 0 300px;
+}
+@media (max-width: 767.99px) {
+    .email-app nav {
+        flex: 0 0 100%;
+    }
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.icon-bell {
+    font-size: 17.5px !important;
+}
+
+.task-count {
+    left: -5% !important;
+}
+
+.card-fs13 {
+    font-size: 13px;
+}
+
+.card-header {
+}
+
+.mxpx-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.mxpx-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mtpx-5 {
+    margin-top: 5px;
+}
+.mtpx-10 {
+    margin-top: 10px;
+}
+.mbpx-5 {
+    margin-bottom: 5px;
+}
+.mbpx-10 {
+    margin-bottom: 10px;
+}
+.mrpx-5 {
+    margin-right: 5px;
+}
+.ppx-10 {
+    padding: 10px !important;
+}
+.pxpx-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.pypx-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.plpx-15 {
+    padding-left: 15px;
+}
+legend.fs14 {
+    margin-bottom: 5px !important;
+}
+.form-check-input {
+    margin-top: 0 !important;
+}
+.form-check-label {
+    line-height: 1rem;
+}
+
+/* flex */
+.f-parent-display {
+    display: flex;
+}
+
+.f-nowrap {
+    flex-wrap: nowrap;
+}
+
+.f-auto {
+    flex: 0 1 auto;
+}
+
+.f-fix150 {
+    min-width: 150px;
+    flex: 1 0 150px;
+}
+
+.p-2-1rem{
+    padding: 1rem 1rem 0 1rem !important;
+}
