@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'la_admin',
+        ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'la_admin',
+        ],
     ],
 
     /*
@@ -63,6 +71,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'la_admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Modules\Admin\Models\AdminModel::class,
         ],
 
         // 'users' => [
@@ -94,6 +106,12 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'la_admin' => [
+            'provider' => 'la_admin',
+            'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],

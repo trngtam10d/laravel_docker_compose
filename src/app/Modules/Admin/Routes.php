@@ -3,11 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-Route::group(['module' => 'Admin', 'middleware' => 'admin', 'namespace' => "App\Modules\Admin\Controllers"], function () {
+Route::group(['module' => 'Admin', 'middleware' => 'web', 'namespace' => "App\Modules\Admin\Controllers"], function () {
 
-    Route::group(["prefix" => "admin"], function () {
-        Route::get('/', function () {
-            dd(1);
-        });
+    // Login/Authenticate
+    Route::get("admin/login", ["as" => "admin.login", "uses" => "Login@login"]);
+    Route::post("admin/login", ["as" => "admin.login_request", "uses" => "Login@login_request"]);
+    Route::get("admin/logout", ["as" => "admin.logout", "uses" => "Login@logout"]);
+
+    Route::group(["prefix" => "admin", 'middleware' => 'auth:admin'], function () {
+        Route::get("/", ["as" => "admin.index", "uses" => "Admin@index"]);
     });
 });
