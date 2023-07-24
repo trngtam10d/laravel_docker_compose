@@ -35,19 +35,26 @@ class Login extends Controller {
             "password.required" => "Please enter your password",
         ]);
 
-        $where = array(
-            'email' => $request->email
+        $auth = array(
+            'email' => $request->email,
+            'password' => $request->password,
         );
-        $admin = AdminModel::where($where)->first();
-        if (!$admin) {
-            abort(404);
+
+        if (Auth::guard("admin")->attempt($auth)) {
+            return redirect()->route("admin.index");
+        } else {
+            return redirect()->route("admin.login")->with(["type" => "danger", "flash_message" => "Email or password is wrong"]);
         }
+    }
 
-        $auth = new \stdClass();
-        $auth->admin_user_id = $admin->id;
-        $auth->staff_name = $admin->staff_name;
-
-        session(['auth' => $auth]);
-        return redirect()->route('admin.index');
+    /**
+     * Authentication requires logout.
+     * @return void
+     */
+    public function logout() {
+        Auth::guard("admin")->logout();
+        if (!Auth::guard("admin")->check()) {
+            return redirect()->route("admin.login");
+        }
     }
 }
